@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chardikala Collection</title>
-    <!-- Tailwind CSS with custom theme integration -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,13 +35,10 @@
             }
         }
     </script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Custom Scrollbar & Premium Styles -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -65,55 +61,30 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #A68444;
         }
-        /* Custom transitions */
         .page-transition {
             transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-        }
-        /* Masonry column configurations */
-        .masonry-grid {
-            column-count: 1;
-            column-gap: 1.5rem;
-        }
-        @media (min-width: 640px) {
-            .masonry-grid {
-                column-count: 2;
-            }
-        }
-        @media (min-width: 1024px) {
-            .masonry-grid {
-                column-count: 3;
-            }
-        }
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 1.5rem;
         }
     </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-gold selection:text-navy">
 
-    <!-- Top Announcement Bar -->
     <div class="bg-navy text-beige text-xs tracking-widest py-2.5 px-4 text-center border-b border-gold/20 relative z-50">
         <p class="font-light uppercase">Authentic Sikh Attire & Punjabi Heritage Wear for KAURS</p>
     </div>
 
-    <!-- Sticky Navigation Bar -->
     <header class="sticky top-0 z-40 bg-beige/95 backdrop-blur-md border-b border-gold/15 transition-all duration-300" id="mainHeader">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20 sm:h-24">
                 
-                <!-- Mobile Menu Button -->
                 <button id="mobileMenuBtn" class="lg:hidden p-2 text-navy focus:outline-none" aria-label="Toggle Menu">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
 
-                <!-- Navigation Links Left -->
                 <nav class="hidden lg:flex space-x-8 items-center text-sm uppercase tracking-widest font-light text-navy">
                     <a href="#home" class="nav-link hover:text-gold transition-colors duration-300 py-2">Home</a>
                     <a href="#collections" class="nav-link hover:text-gold transition-colors duration-300 py-2">Collections</a>
                 </nav>
 
-                <!-- Premium Center Logo -->
                 <div class="text-center">
                     <a href="#home" class="group flex flex-col items-center">
                         <span class="text-2xl sm:text-3xl font-serif-luxury tracking-widest text-navy group-hover:text-gold transition-colors duration-300">
@@ -125,7 +96,6 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links Right & Search -->
                 <div class="flex items-center space-x-6 sm:space-x-8">
                     <nav class="hidden lg:flex space-x-8 items-center text-sm uppercase tracking-widest font-light text-navy">
                         <a href="#about" class="nav-link hover:text-gold transition-colors duration-300 py-2">Our Story</a>
@@ -133,7 +103,6 @@
                         <a href="#contact" class="nav-link hover:text-gold transition-colors duration-300 py-2">Contact</a>
                     </nav>
                     
-                    <!-- Right Utility Icons -->
                     <div class="flex items-center space-x-4 text-navy">
                         <button onclick="navigateTo('collections')" class="hover:text-gold transition-colors p-2" aria-label="Search Collections">
                             <i data-lucide="search" class="w-5 h-5"></i>
@@ -144,11 +113,9 @@
         </div>
     </header>
 
-    <!-- Mobile Slide-out Menu Drawer -->
     <div id="mobileDrawer" class="fixed inset-0 z-50 bg-navy/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
         <div class="absolute inset-y-0 left-0 max-w-xs w-full bg-beige shadow-2xl p-6 flex flex-col justify-between transform -translate-x-full transition-transform duration-300 ease-in-out" id="mobileDrawerContent">
             <div>
-                <!-- Close Button & Logo -->
                 <div class="flex items-center justify-between border-b border-gold/10 pb-6">
                     <div class="flex flex-col">
                         <span class="text-xl font-serif-luxury tracking-widest text-navy">CHARDIKALA</span>
@@ -159,7 +126,6 @@
                     </button>
                 </div>
                 
-                <!-- Nav Links -->
                 <nav class="mt-8 space-y-6 flex flex-col text-base uppercase tracking-widest font-light text-navy">
                     <a href="#home" class="mobile-nav-link hover:text-gold transition-colors">Home</a>
                     <a href="#collections" class="mobile-nav-link hover:text-gold transition-colors">Collections</a>
@@ -169,7 +135,6 @@
                 </nav>
             </div>
 
-            <!-- Footer area of Mobile Menu -->
             <div class="border-t border-gold/10 pt-6">
                 <p class="text-xs text-charcoal/60 leading-relaxed font-light mb-4">Discover elegant, modest clothing crafted for the modern Sikh woman.</p>
                 <div class="flex space-x-4 text-gold">
@@ -180,16 +145,12 @@
         </div>
     </div>
 
-    <!-- MAIN APP WRAPPER (Views dynamic insertion) -->
     <main id="app-container" class="flex-grow">
-        <!-- Dynmically loaded routes appear here -->
-    </main>
+        </main>
 
-    <!-- Global Premium Footer -->
     <footer class="bg-navy text-beige border-t-2 border-gold/30 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <!-- Brand Mission Statement -->
                 <div class="md:col-span-1 space-y-4">
                     <span class="text-2xl font-serif-luxury tracking-widest text-beige">CHARDIKALA</span>
                     <span class="block text-[9px] tracking-[0.4em] text-gold uppercase -mt-2">Collection</span>
@@ -198,28 +159,23 @@
                     </p>
                 </div>
 
-                <!-- Fast Links -->
                 <div>
                     <h4 class="text-sm uppercase tracking-widest text-gold font-medium mb-6">Explore</h4>
                     <ul class="space-y-3.5 text-sm font-light text-beige/80">
                         <li><a href="#collections" class="hover:text-gold transition-colors">All Collections</a></li>
-                        <li><a href="#gallery" class="hover:text-gold transition-colors">The Lookbook</a></li>
                         <li><a href="#about" class="hover:text-gold transition-colors">Our Roots & Heritage</a></li>
                     </ul>
                 </div>
 
-                <!-- Custom Care -->
                 <div>
                     <h4 class="text-sm uppercase tracking-widest text-gold font-medium mb-6">Customer Support</h4>
                     <ul class="space-y-3.5 text-sm font-light text-beige/80">
                         <li><a href="#faq" class="hover:text-gold transition-colors">Shipping & Returns</a></li>
                         <li><a href="#contact" class="hover:text-gold transition-colors">Direct Custom Inquiries</a></li>
-                        <li><a href="#contact" class="hover:text-gold transition-colors">Schedule Private Viewing</a></li>
-                        <li><a href="https://wa.me/919876543210" target="_blank" class="hover:text-gold transition-colors">WhatsApp Concierge</a></li>
+                        <li><a href="https://wa.me/917355654106" target="_blank" class="hover:text-gold transition-colors">WhatsApp Concierge</a></li>
                     </ul>
                 </div>
 
-                <!-- Newsletter Subscription -->
                 <div class="space-y-4">
                     <h4 class="text-sm uppercase tracking-widest text-gold font-medium mb-6">The Chardikala Guild</h4>
                     <p class="text-sm font-light text-beige/70 leading-relaxed">
@@ -234,80 +190,54 @@
                 </div>
             </div>
 
-            <!-- Bottom Copyright & Social -->
             <div class="border-t border-gold/15 mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-light text-beige/60 space-y-4 sm:space-y-0">
                 <p>&copy; 2026 Chardikala Collection. All Rights Reserved.</p>
                 <div class="flex space-x-6">
-                    <a href="https://instagram.com" target="_blank" class="hover:text-gold transition-colors">INSTAGRAM</a>
+                    <a href="https://instagram.com/chardikala_collection_" target="_blank" class="hover:text-gold transition-colors">INSTAGRAM</a>
                     <a href="https://wa.me/917355654106" target="_blank" class="hover:text-gold transition-colors">WHATSAPP</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Custom Luxury Notification Modal/Toast (Replaces generic alert) -->
     <div id="toastNotification" class="fixed bottom-6 right-6 z-50 bg-navy text-beige border border-gold px-6 py-4 shadow-2xl rounded-sm transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center space-x-3">
         <i data-lucide="check" class="text-gold w-5 h-5"></i>
         <span id="toastMessage" class="text-sm tracking-wide font-light">Added successfully</span>
     </div>
 
-    <!-- Lookbook Lightbox Modal -->
-    <div id="lightboxModal" class="fixed inset-0 z-50 bg-charcoal/95 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
-        <button id="closeLightboxBtn" class="absolute top-6 right-6 text-beige hover:text-gold transition-colors">
-            <i data-lucide="x" class="w-8 h-8"></i>
-        </button>
-        <div class="max-w-4xl max-h-[85vh] w-full flex flex-col items-center">
-            <img id="lightboxImg" src="" alt="High-Resolution Lookbook" class="max-w-full max-h-[75vh] object-contain border border-gold/20 shadow-2xl">
-            <p id="lightboxCaption" class="text-beige mt-4 text-center font-serif-luxury text-lg tracking-widest text-gold"></p>
-        </div>
-    </div>
-
-
-    <!-- ========================================== -->
-    <!-- DATABASE & ROUTING SCRIPTS -->
-    <!-- ========================================== -->
     <script>
-        // High-Quality Product Dataset
+        // Restructured Product Dataset (Removed nested colors, added unique img keys, normalized categories)
         const products = [
             {
                 id: 1,
-                name: "The Chardi Kala Flared Bana Set – Sky & Navy",
+                name: "The Chardi Kala Flared Bana Set",
+                category: "Kurta Sets",
                 tagline: "Designed for the modern woman who walks in eternal optimism and effortless grace",
                 basePrice: "₹24,500",
                 rawPrice: 24500,
                 fabric: "Crafted from a lightweight, breathable, and high-quality flowy fabric designed to offer an immaculate drape while keeping you comfortable all day long.",
                 care: "Gentle hand wash or dry clean recommended. Iron on low heat.",
-                description: "Embodying the spirit of eternal optimism, the Chardi Kala Flared Bana Set beautifully balances effortless grace with contemporary modest style. This stunning three-piece ensemble features a fluid, floor-length sky blue chola that drapes magnificently, perfectly contrasted by tailored navy leggings and a premium, lace-bordered stole. Crafted from a breathable, high-quality fabric that offers a sophisticated look and all-day comfort, it is the perfect choice for festive gatherings, formal events, or elevated everyday wear.",
+                description: "Embodying the spirit of eternal optimism, the Chardi Kala Flared Bana Set beautifully balances effortless grace with contemporary modest style. This stunning three-piece ensemble features a fluid, floor-length sky blue chola that drapes magnificently, perfectly contrasted by tailored navy leggings and a premium, lace-bordered stole.",
                 sizes: ["Custom Tailoring"],
-                defaultColor: "Navy Blue",
-                colors: {
-                    "Navy Blue": {
-                        img: "./images/1.png",
-                        description: "Deep Royal Blue symbolizing infinite depth and divine calm."
-                    }
-                }
+                img: "./images/1.png"
             },
             {
                 id: 2,
-                name: "The Nirmal Baana Anarkali Set – Pristine White",
+                name: "The Nirmal Baana Anarkali Set",
+                category: "Anarkali",
                 tagline: "A celebration of pure grace, dignity, and timeless royal heritage.",
                 basePrice: "₹14,200",
                 rawPrice: 14200,
                 fabric: "Cut from premium, high-quality fabric that ensures breathability, all-day comfort, and an immaculate, clean drape.",
                 care: "Gentle cold handwash with mild laundry liquids. Warm iron.",
-                description: "Designed to reflect spiritual purity and traditional heritage, the Nirmal Baana Anarkali Set brings a serene elegance to modern modest wear. This classic three-piece ensemble features a beautifully flowing, floor-length white kurta with subtle embroidery details on the cuffs, paired with matching fitted leggings and a sheer, lightweight dupatta. Crafted from soft, breathable fabric for an impeccable drape, it offers a dignified silhouette perfect for Gurdwara visits, festive celebrations, or formal occasions.",
+                description: "Designed to reflect spiritual purity and traditional heritage, the Nirmal Baana Anarkali Set brings a serene elegance to modern modest wear. This classic three-piece ensemble features a beautifully flowing, floor-length kurta with subtle embroidery details on the cuffs, paired with matching fitted leggings and a sheer, lightweight dupatta.",
                 sizes: ["Custom Tailoring"],
-                defaultColor: "Beige",
-                colors: {
-                    "Beige": {
-                        img: "./images/5.png",
-                        description: "Luminous soft natural beige that breathes naturally."
-                    }
-                }
+                img: "./images/5.png"
             },
             {
                 id: 3,
-                name: "The Simran Lace Anarkali Set – Muted Mauve",
+                name: "The Simran Lace Anarkali Set",
+                category: "Anarkali",
                 tagline: "A harmonious blend of tranquil devotion, inner peace, and timeless sophistication.",
                 basePrice: "₹29,000",
                 rawPrice: 29000,
@@ -315,107 +245,101 @@
                 care: "Professional Dry Clean Recommended to preserve silk thread work.",
                 description: "A show-stopping heritage gown with full-panel authentic Punjabi Phulkari geometries hand-stitched by female artisans. Featuring high collars, a fully-lined inner structured vest, and a magnificent floor-length sweep.",
                 sizes: ["Custom Tailoring"],
-                defaultColor: "Maroon",
-                colors: {
-                    "Maroon": {
-                        img: "./images/3.png",
-                        description: "Authentic crimson heirloom base with multicolored silken embroidery."
-                    }
-                }
+                img: "./images/3.png"
             },
             {
                 id: 4,
-                name: "The Akaali Bana Set – Royal Indigo",
+                name: "The Akaali Bana Set",
+                category: "Kurta Sets",
                 tagline: "A powerful expression of timeless heritage, majestic sovereignty, and effortless grace.",
                 basePrice: "₹18,900",
                 rawPrice: 18900,
                 fabric: "Crafted from premium, breathable, and high-grade structured fabric that holds its shape beautifully while ensuring all-day comfort.",
-                care: "Hand wash cold separately to maintain the rich vibrancy of the indigo hue.",
-                description: "Rooted in the rich traditions of the Khalsa spirit, the Akaal Scallop Gown Set commands a presence of dignified strength and spiritual elegance. This striking deep indigo ensemble features a beautifully flowing, long flared gown adorned with classic fabric-covered buttons down the center bodice. Perfectly complemented by a matching dupatta featuring crisp, silver-trimmed scalloped edges, this set seamlessly bridges traditional warrior-spirit colors with delicate contemporary craftsmanship—making it an exceptional choice for Gurdwara services, historic celebrations, and formal gatherings.",
+                care: "Hand wash cold separately to maintain the rich vibrancy of the hue.",
+                description: "Rooted in the rich traditions of the Khalsa spirit, the Akaal Scallop Gown Set commands a presence of dignified strength and spiritual elegance. This striking deep indigo ensemble features a beautifully flowing, long flared gown adorned with classic fabric-covered buttons down the center bodice.",
                 sizes: ["Custom Tailoring"],
-                defaultColor: "Mustard",
-                colors: {
-                    "Mustard": {
-                        img: "./images/4.png",
-                        description: "Traditional mustard gold overlay reflecting sunlight gracefully."
-                    }
-                }
+                img: "./images/4.png"
             },
             {
                 id: 5,
-                name: "The Sidhak Plaid Salwar Set – Earthy Olive",
+                name: "The Sidhak Plaid Salwar Set",
+                category: "Kurta Sets",
                 tagline: "Grounded in strength, designed for effortless everyday resilience and comfort.",
                 basePrice: "₹8,500",
                 rawPrice: 8500,
                 fabric: "Made from a high-quality, breathable fabric blend designed to withstand daily wear while maintaining a fresh, crisp look all day.",
                 care: "Machine wash cold with like colors on a gentle cycle.",
-                description: "Perfectly capturing a blend of practical utility and traditional grace, the Sidhak Plaid Salwar Set is designed for the modern woman on the move. This contemporary three-piece ensemble features a relaxed, short checkered tunic tailored with long sleeves, effortlessly paired with rich olive green draped salwar trousers and a matching lightweight dupatta. Crafted from a breathable, durable fabric blend, this set provides a structured yet incredibly comfortable silhouette, making it an excellent choice for daily wear, casual outings, or quiet outdoor reflection.",
+                description: "Perfectly capturing a blend of practical utility and traditional grace, the Sidhak Plaid Salwar Set is designed for the modern woman on the move. This contemporary three-piece ensemble features a relaxed, short checkered tunic tailored with long sleeves, effortlessly paired with rich olive green draped salwar trousers.",
                 sizes: ["Custom Tailoring"],
-                defaultColor: "Maroon",
-                colors: {
-                    "Maroon": {
-                        img: "./images/2.png",
-                        description: "Heroic deep crimson border depicting timeless courage and strength."
-                    }
-                }
+                img: "./images/2.png"
             },
             {
                 id: 6,
-                name: "The Santokh Embellished Tunic Set – Earthy Umber & Taupe",
+                name: "The Santokh Embellished Tunic Set",
+                category: "Luxury Fusion",
                 tagline: "Grounded in deep contentment, radiating a quiet and profound elegance.",
                 basePrice: "₹19,800",
                 rawPrice: 19800,
                 fabric: "Cut from a lightweight, high-quality fabric blend that ensures an immaculate, graceful drape and exceptional comfort throughout the day.",
                 care: "Hand wash cold inside out with a mild detergent to protect the delicate beadwork.",
-                description: "Reflecting the timeless virtue of inner calm and peace, the Santokh Embellished Tunic Set beautifully captures earthy warmth with refined sophistication. This elegant three-piece ensemble features a rich chocolate brown tunic subtly adorned with delicate, scattered gold beaded details across the bodice and sleeves. Balanced seamlessly with fluid, wide-leg taupe trousers and a matching sheer dupatta finished with an intricate lace border, it provides a graceful silhouette ideal for evening gatherings, formal events, or festive celebrations.",
+                description: "Reflecting the timeless virtue of inner calm and peace, the Santokh Embellished Tunic Set beautifully captures earthy warmth with refined sophistication. This elegant three-piece ensemble features a rich chocolate brown tunic subtly adorned with delicate, scattered gold beaded details across the bodice.",
                 sizes: ["Custom Tailoring"],
-                defaultColor: "Navy Blue",
-                colors: {
-                    "Navy Blue": {
-                        img: "./images/6.png",
-                        description: "Deep majestic sapphire with shimmering gold Banarasi motifs."
-                    }
-                }
+                img: "./images/6.png"
+            },
+            {
+                id: 7,
+                name: "The Mehar Chanderi Dupatta Suit Set",
+                category: "Dupattas",
+                tagline: "Woven with delicate tilla highlights to drape you in historical sophistication.",
+                basePrice: "₹16,500",
+                rawPrice: 16500,
+                fabric: "Authentic premium Chanderi silk blend offering a subtle, soft luster and gossamer profile structural composition.",
+                care: "Dry clean only. Store wrapped in soft muslin fabric panels to protect thread motifs.",
+                description: "Centering around a spectacular, hand-woven Chanderi statement dupatta, this suit honors ancestral loom legacies. The base tunic remains beautifully understated, letting the royal borders and geometric gold thread details capture light gracefully.",
+                sizes: ["Custom Tailoring"],
+                img: "./images/7.png"
+            },
+            {
+                id: 8,
+                name: "The Sukhmani Linen Kurti Set",
+                category: "Luxury Fusion",
+                tagline: "Breathable everyday structural geometry celebrating elegant minimalism.",
+                basePrice: "₹11,200",
+                rawPrice: 11200,
+                fabric: "Organic high-grade linen mixed with soft cotton fibers to guarantee zero-carbon structural integrity.",
+                care: "Gentle cold machine wash inside out. Warm steam iron format configuration setup.",
+                description: "A functional luxury piece designed to ensure effortless daily poise. Features crisp mandarin straight collars, hidden utility side pockets, and fully lined side slits for seamless structural drape alignments.",
+                sizes: ["Custom Tailoring"],
+                img: "./images/8.png"
             }
         ];
 
-        // System Constants
-        const WHATSAPP_PHONE = "917355654106"; // Placeholder premium contact number
+        const WHATSAPP_PHONE = "917355654106";
 
-        // Local state management
         let appState = {
             currentPage: 'home',
             selectedProductId: null,
-            selectedColor: '',
             selectedSize: '',
             filters: {
                 category: 'all',
-                color: 'all',
                 search: '',
                 sort: 'default'
             }
         };
 
-        // Initialize Router and Event Listeners
         window.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
             handleRouting();
             setupHeaderEffects();
             setupDrawerEvents();
-            setupGlobalClickHandlers();
         });
 
-        // Listen for back/forward browser navigation
         window.addEventListener('hashchange', handleRouting);
 
-        // Simple Router to maintain Single File SPA experience cleanly
         function handleRouting() {
             const hash = window.location.hash || '#home';
-            
-            // Close mobile menu if open on route change
             closeDrawer();
 
-            // Parse Route parameters (e.g., #product?id=1)
             const routeParts = hash.split('?');
             const routeName = routeParts[0];
             const params = {};
@@ -427,7 +351,6 @@
                 }
             }
 
-            // Scroll to top immediately to mimic new page loading
             window.scrollTo({ top: 0, behavior: 'instant' });
 
             switch(routeName) {
@@ -443,10 +366,6 @@
                 case '#about':
                     appState.currentPage = 'about';
                     renderAboutPage();
-                    break;
-                case '#gallery':
-                    appState.currentPage = 'gallery';
-                    renderGalleryPage();
                     break;
                 case '#faq':
                     appState.currentPage = 'faq';
@@ -467,7 +386,6 @@
             lucide.createIcons();
         }
 
-        // Programmatic navigator helper
         function navigateTo(page, paramsObj = null) {
             let hash = `#${page}`;
             if (paramsObj) {
@@ -477,7 +395,6 @@
             window.location.hash = hash;
         }
 
-        // Setup sticky header scroll effects
         function setupHeaderEffects() {
             const header = document.getElementById('mainHeader');
             window.addEventListener('scroll', () => {
@@ -491,12 +408,10 @@
             });
         }
 
-        // Navigation drawer behaviors
         function setupDrawerEvents() {
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const closeDrawerBtn = document.getElementById('closeDrawerBtn');
             const mobileDrawer = document.getElementById('mobileDrawer');
-            const mobileDrawerContent = document.getElementById('mobileDrawerContent');
 
             mobileMenuBtn.addEventListener('click', openDrawer);
             closeDrawerBtn.addEventListener('click', closeDrawer);
@@ -521,7 +436,6 @@
             }
         }
 
-        // Update CSS state of current page link
         function updateNavHighlight() {
             document.querySelectorAll('.nav-link').forEach(link => {
                 const isMatch = link.getAttribute('href') === `#${appState.currentPage}`;
@@ -535,50 +449,18 @@
             });
         }
 
-        function setupGlobalClickHandlers() {
-            // Close dynamic components on Escape key
-            window.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    closeLightbox();
-                }
-            });
-            document.getElementById('closeLightboxBtn').addEventListener('click', closeLightbox);
-            document.getElementById('lightboxModal').addEventListener('click', (e) => {
-                if (e.target === document.getElementById('lightboxModal')) closeLightbox();
-            });
-        }
-
-
-        // ==========================================
-        // ROUTE RENDERERS (VIEWS)
-        // ==========================================
-
-        // 1. HOME VIEW RENDERER
         function renderHomePage() {
             const app = document.getElementById('app-container');
-            
-            // Map out best seller products markup
             const bestSellers = products.slice(0, 3);
             let productCardsHtml = '';
             bestSellers.forEach(p => {
-                const defaultColorName = p.defaultColor;
-                const defaultImg = p.colors[defaultColorName].img;
-                productCardsHtml += generateProductCardHTML(p, defaultImg, defaultColorName);
+                productCardsHtml += generateProductCardHTML(p);
             });
 
             app.innerHTML = `
-                <!-- Page Transition Wrapper -->
                 <div class="page-transition opacity-100">
-                    
-                    <!-- HERO SECTION -->
                     <section class="relative min-h-[90vh] flex items-center justify-center bg-navy text-beige overflow-hidden px-4">
-                        <!-- Background Accent Graphic -->
-                        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-30 mix-blend-luminosity scale-105 transition-all duration-1000" 
-                             style="background-image: url('images/hero.png">
-                        </div>
                         <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent z-10"></div>
-                        
-                        <!-- Hero Content Frame -->
                         <div class="relative z-20 max-w-4xl text-center space-y-8 py-16">
                             <span class="text-gold tracking-[0.4em] uppercase text-xs sm:text-sm block font-light">Premium Craftsmanship • Tradition Elevated</span>
                             <h1 class="text-4xl sm:text-6xl md:text-7xl font-light tracking-wide leading-tight sm:leading-none text-beige">
@@ -586,10 +468,10 @@
                                 <span class="font-serif-luxury text-gold italic font-normal">For The Royal Spirit</span>
                             </h1>
                             <p class="text-sm sm:text-lg text-beige/80 font-light max-w-2xl mx-auto leading-relaxed">
-                                Garments Designed Meticulously to Celebrate Strength, Grace, and Spiritual Legacyof the modern Sikh woman.
+                                Garments Designed Meticulously to Celebrate Strength, Grace, and Spiritual Legacy of the modern Sikh woman.
                             </p>
                             <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="#collections" class="w-full sm:w-auto bg-gold text-navy hover:bg-gold-light border border-gold hover:border-gold-light px-10 py-4 text-xs tracking-widest uppercase font-medium transition-colors duration-300">
+                                <a href="#collections" class="w-full sm:w-auto bg-gold text-navy hover:bg-gold-light border border-gold px-10 py-4 text-xs tracking-widest uppercase font-medium transition-colors duration-300">
                                     Shop the Heirloom
                                 </a>
                                 <a href="#about" class="w-full sm:w-auto border border-beige hover:border-gold hover:text-gold px-10 py-4 text-xs tracking-widest uppercase font-light transition-colors duration-300">
@@ -597,14 +479,8 @@
                                 </a>
                             </div>
                         </div>
-
-                        <!-- Elegant bottom indicator -->
-                        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 hidden md:block animate-bounce">
-                            <i data-lucide="chevron-down" class="text-gold/60 w-6 h-6"></i>
-                        </div>
                     </section>
 
-                    <!-- BRAND ELEVATION / VALUE HIGHLIGHTS -->
                     <section class="bg-beige border-y border-gold/15 py-12 px-4 sm:px-6 lg:px-8">
                         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gold/15">
                             <div class="p-4 space-y-2">
@@ -613,7 +489,7 @@
                             </div>
                             <div class="p-4 space-y-2 pt-6 md:pt-4">
                                 <h3 class="font-serif-luxury text-xl text-navy">Handworked Legacy</h3>
-                                <p class="text-xs text-charcoal/70 font-light leading-relaxed max-w-xs mx-auto">Sourced directly from heirloom Punjabi artisans skilled in traditional zardozi, phulkari, and tilla stitches.</p>
+                                <p class="text-xs text-charcoal/70 font-light leading-relaxed max-w-xs mx-auto">Sourced directly from heirloom Punjabi artisans skilled in traditional stitches.</p>
                             </div>
                             <div class="p-4 space-y-2 pt-6 md:pt-4">
                                 <h3 class="font-serif-luxury text-xl text-navy">Custom Fit Options</h3>
@@ -622,135 +498,43 @@
                         </div>
                     </section>
 
-                    <!-- BEST SELLERS SECTION -->
                     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
                         <div class="text-center space-y-3 mb-16">
                             <span class="text-gold uppercase tracking-widest text-xs font-light">Sought After Masterpieces</span>
                             <h2 class="text-3xl sm:text-4xl text-navy font-light">The Chardikala Best Sellers</h2>
                             <div class="w-16 h-[1px] bg-gold mx-auto"></div>
                         </div>
-
-                        <!-- Best sellers product grid -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                             ${productCardsHtml}
-                        </div>
-
-                        <!-- Explore CTA -->
-                        <div class="text-center mt-16">
-                            <a href="#collections" class="inline-flex items-center space-x-2 border-b border-navy pb-1 text-sm tracking-widest text-navy uppercase hover:text-gold hover:border-gold transition-colors font-medium">
-                                <span>Explore All Creations</span>
-                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </section>
-
-                    <!-- ABOUT BRAND / HERITAGE STORY SNIPPET -->
-                    <section class="bg-navy text-beige py-24 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-[radial-gradient(#C8A96A_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                                <!-- Imagery -->
-                                <div class="lg:col-span-5 space-y-4">
-                                    <div class="relative border border-gold/30 p-2 group overflow-hidden">
-                                        <img src="images/homepage.png" 
-                                             alt="Heritage Sikh elegance" class="w-full object-cover max-h-[500px] grayscale group-hover:grayscale-0 transition-all duration-700">
-                                        <div class="absolute inset-0 border border-gold/20 pointer-events-none m-4"></div>
-                                    </div>
-                                    <div class="flex items-center justify-between text-xs text-gold/60 font-light px-2 tracking-widest">
-                                        <span>ESTABLISHED 2025</span>
-                                        <span>GLOBALLY AVAILABLE</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Brand text -->
-                                <div class="lg:col-span-7 space-y-6">
-                                    <span class="text-gold uppercase tracking-widest text-xs font-light block">Our Sacred Ethos</span>
-                                    <h2 class="text-4xl md:text-5xl font-light text-beige tracking-wide leading-snug">
-                                        A Symphony of Grace, <br>Strength and Spiritual Heritage
-                                    </h2>
-                                    <p class="text-beige/80 font-light text-sm leading-relaxed">
-                                        The term <strong class="text-gold font-normal font-serif-luxury text-base">"Chardikala"</strong> represents an unshakeable, eternal state of optimistic high spirits and divine peace, even in adversity. Our collection is designed to reflect this exact sovereign grace.
-                                    </p>
-                                    <p class="text-beige/80 font-light text-sm leading-relaxed">
-                                        Each apparel selection honors the legacy of iconic royal Punjabi matriarchs. By fusing meticulous embroidery details, pure silk-linens, and regal drape structures with custom fits, we preserve modest, premium cultural expression for global women of spirit.
-                                    </p>
-                                    <div class="pt-4">
-                                        <a href="#about" class="bg-gold text-navy hover:bg-gold-light transition-colors px-8 py-3.5 text-xs tracking-widest uppercase font-medium inline-block">
-                                            Discover Our Roots
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <!-- CUSTOMER TESTIMONIALS -->
-                    <section class="bg-beige border-t border-gold/15 py-24">
-                        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-                            <span class="text-gold uppercase tracking-widest text-xs font-light block">Echoes of Gratitude</span>
-                            <div class="relative max-w-3xl mx-auto">
-                                <p class="text-xl sm:text-2xl text-navy font-serif-luxury italic leading-relaxed">
-                                    "Wearing Chardikala makes me feel connected, royal and utterly dignified. The Anarkali suit in white fit exactly to my proportions, and the craftsmanship details received unending appreciation."
-                                </p>
-                                <span class="block text-gold text-5xl font-serif-luxury leading-none mt-4">“</span>
-                            </div>
-                            <div class="space-y-1">
-                                <h4 class="text-sm uppercase tracking-widest font-semibold text-navy">Harsimran Kaur</h4>
-                                <span class="text-xs text-charcoal/60 font-light">London, UK</span>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- CALL TO ACTION (CTA) -->
-                    <section class="bg-navy border-t-2 border-gold/40 text-beige text-center py-24 px-4">
-                        <div class="max-w-2xl mx-auto space-y-6">
-                            <span class="text-gold uppercase tracking-[0.3em] text-xs font-light block">Bespoke Design Group</span>
-                            <h2 class="text-3xl sm:text-4xl md:text-5xl font-light">Desire a Customized Fit?</h2>
-                            <p class="text-sm text-beige/70 font-light leading-relaxed max-w-lg mx-auto">
-                                Our bespoke team works directly with individual measurement profiles globally. Request alterations, fabric swaps, and custom lengths on our dedicated secure WhatsApp portal.
-                            </p>
-                            <div class="pt-6">
-                                <a href="https://wa.me/${WHATSAPP_PHONE}?text=Waheguru%20Ji%20Ka%20Khalsa%20Waheguru%20Ji%20Ki%20Fateh.%20I%20am%20interested%20in%20a%20custom%20tailoring%20consultation%20with%20Chardikala%20Collection." 
-                                   target="_blank" class="bg-gold text-navy hover:bg-gold-light transition-all px-10 py-4 text-xs tracking-widest uppercase font-medium inline-flex items-center space-x-3">
-                                    <i data-lucide="phone" class="w-4 h-4"></i>
-                                    <span>Consult On WhatsApp</span>
-                                </a>
-                            </div>
                         </div>
                     </section>
                 </div>
             `;
         }
 
-        // 2. COLLECTIONS VIEW RENDERER (Filters, Search, Sorting & Grid)
         function renderCollectionsPage() {
             const app = document.getElementById('app-container');
 
+            // Adjusted grid structure layout to fit 3 control components beautifully
             app.innerHTML = `
                 <div class="page-transition opacity-100 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <!-- Title Header -->
                     <div class="text-center space-y-4 mb-16">
                         <h1 class="text-4xl font-light text-navy tracking-wide">The Chardikala Catalog</h1>
-                        <p class="text-xs sm:text-sm font-light text-charcoal/60 tracking-wider uppercase">Filter by apparel category, fabric shade or dynamic keyword searches</p>
+                        <p class="text-xs sm:text-sm font-light text-charcoal/60 tracking-wider uppercase">Filter by apparel category or dynamic keyword searches</p>
                         <div class="w-12 h-[1px] bg-gold mx-auto mt-2"></div>
                     </div>
 
-                    <!-- CONTROL PANEL (Search, Filters, Sort) -->
                     <div class="bg-beige border border-gold/20 p-6 sm:p-8 mb-12 space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                            
-                            <!-- Search Inputs -->
-                            <div class="relative">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
                                 <label class="block text-[10px] tracking-widest uppercase text-navy font-medium mb-2">Search Creations</label>
                                 <div class="relative">
-                                    <input type="text" id="searchInput" value="${appState.filters.search}" placeholder="Keyword (silk, kurti...)" 
+                                    <input type="text" id="searchInput" value="${appState.filters.search}" placeholder="Keyword (silk, linen...)" 
                                            class="w-full bg-white border border-gold/15 text-sm font-light px-4 py-2.5 focus:outline-none focus:border-gold placeholder:text-charcoal/30">
                                     <i data-lucide="search" class="absolute right-3 top-3 text-gold w-4 h-4"></i>
                                 </div>
                             </div>
 
-                            <!-- Category Select -->
                             <div>
                                 <label class="block text-[10px] tracking-widest uppercase text-navy font-medium mb-2">Select Category</label>
                                 <select id="categoryFilter" class="w-full bg-white border border-gold/15 text-sm font-light px-4 py-2.5 focus:outline-none focus:border-gold">
@@ -762,19 +546,6 @@
                                 </select>
                             </div>
 
-                            <!-- Color Shade Select -->
-                            <div>
-                                <label class="block text-[10px] tracking-widest uppercase text-navy font-medium mb-2">Color Palette</label>
-                                <select id="colorFilter" class="w-full bg-white border border-gold/15 text-sm font-light px-4 py-2.5 focus:outline-none focus:border-gold">
-                                    <option value="all" ${appState.filters.color === 'all' ? 'selected' : ''}>All Shades</option>
-                                    <option value="Navy Blue" ${appState.filters.color === 'Navy Blue' ? 'selected' : ''}>Navy Blue</option>
-                                    <option value="Beige" ${appState.filters.color === 'Beige' ? 'selected' : ''}>Beige</option>
-                                    <option value="Maroon" ${appState.filters.color === 'Maroon' ? 'selected' : ''}>Maroon</option>
-                                    <option value="Mustard" ${appState.filters.color === 'Mustard' ? 'selected' : ''}>Mustard</option>
-                                </select>
-                            </div>
-
-                            <!-- Sorting Select -->
                             <div>
                                 <label class="block text-[10px] tracking-widest uppercase text-navy font-medium mb-2">Sort Order</label>
                                 <select id="sortFilter" class="w-full bg-white border border-gold/15 text-sm font-light px-4 py-2.5 focus:outline-none focus:border-gold">
@@ -783,57 +554,41 @@
                                     <option value="price-desc" ${appState.filters.sort === 'price-desc' ? 'selected' : ''}>Price: High to Low</option>
                                 </select>
                             </div>
-
                         </div>
 
-                        <!-- Reset Button / Filter State Output -->
                         <div class="flex items-center justify-between border-t border-gold/15 pt-4 text-xs font-light text-charcoal/60">
                             <span id="resultsCount">Filtering catalog items...</span>
                             <button id="clearFiltersBtn" class="text-gold hover:text-navy hover:underline transition-all">Clear All Filter Tags</button>
                         </div>
                     </div>
 
-                    <!-- PRODUCTS GRID -->
-                    <div id="collectionsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                        <!-- Dynamic generated cards -->
-                    </div>
+                    <div id="collectionsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"></div>
 
-                    <!-- Empty state -->
                     <div id="collectionsEmpty" class="hidden text-center py-20 space-y-4">
                         <i data-lucide="archive-x" class="w-12 h-12 text-gold/40 mx-auto"></i>
                         <h3 class="font-serif-luxury text-2xl text-navy">No Creations Match Your Filters</h3>
-                        <p class="text-sm font-light text-charcoal/60 max-w-sm mx-auto">Try resetting the search inputs or matching alternative color shades.</p>
+                        <p class="text-sm font-light text-charcoal/60 max-w-sm mx-auto">Try resetting the search inputs or matching alternative design terms.</p>
                     </div>
                 </div>
             `;
 
-            // Run listeners for collection controls
             setupCollectionFilters();
             filterAndRenderCatalog();
         }
 
-        // Active logical filters on state adjustments
         function setupCollectionFilters() {
             const searchInput = document.getElementById('searchInput');
             const categoryFilter = document.getElementById('categoryFilter');
-            const colorFilter = document.getElementById('colorFilter');
             const sortFilter = document.getElementById('sortFilter');
             const clearFiltersBtn = document.getElementById('clearFiltersBtn');
 
-            // Hook up real-time search typing
             searchInput.addEventListener('input', (e) => {
                 appState.filters.search = e.target.value;
                 filterAndRenderCatalog();
             });
 
-            // Handle options selection swaps
             categoryFilter.addEventListener('change', (e) => {
                 appState.filters.category = e.target.value;
-                filterAndRenderCatalog();
-            });
-
-            colorFilter.addEventListener('change', (e) => {
-                appState.filters.color = e.target.value;
                 filterAndRenderCatalog();
             });
 
@@ -843,21 +598,18 @@
             });
 
             clearFiltersBtn.addEventListener('click', () => {
-                appState.filters = { category: 'all', color: 'all', search: '', sort: 'default' };
+                appState.filters = { category: 'all', search: '', sort: 'default' };
                 searchInput.value = '';
                 categoryFilter.value = 'all';
-                colorFilter.value = 'all';
                 sortFilter.value = 'default';
                 filterAndRenderCatalog();
                 showCustomToast("Catalog filter tags cleared.");
             });
         }
 
-        // Mathematical Filter computation of Products array
         function filterAndRenderCatalog() {
             let filtered = [...products];
 
-            // 1. Text Search Match
             if (appState.filters.search.trim() !== '') {
                 const keyword = appState.filters.search.toLowerCase();
                 filtered = filtered.filter(p => 
@@ -868,24 +620,16 @@
                 );
             }
 
-            // 2. Category Match
             if (appState.filters.category !== 'all') {
                 filtered = filtered.filter(p => p.category === appState.filters.category);
             }
 
-            // 3. Color availability check
-            if (appState.filters.color !== 'all') {
-                filtered = filtered.filter(p => Object.keys(p.colors).includes(appState.filters.color));
-            }
-
-            // 4. Sort order mapping
             if (appState.filters.sort === 'price-asc') {
                 filtered.sort((a, b) => a.rawPrice - b.rawPrice);
             } else if (appState.filters.sort === 'price-desc') {
                 filtered.sort((a, b) => b.rawPrice - a.rawPrice);
             }
 
-            // Render output
             const grid = document.getElementById('collectionsGrid');
             const emptyState = document.getElementById('collectionsEmpty');
             const resultsCount = document.getElementById('resultsCount');
@@ -899,45 +643,36 @@
                 emptyState.classList.add('hidden');
                 let html = '';
                 filtered.forEach(p => {
-                    // Decide color base to present on grid card
-                    // If color filter is selected, load that specific card image. Otherwise default color
-                    const chosenColor = appState.filters.color !== 'all' ? appState.filters.color : p.defaultColor;
-                    const img = p.colors[chosenColor].img;
-                    html += generateProductCardHTML(p, img, chosenColor);
+                    html += generateProductCardHTML(p);
                 });
                 grid.innerHTML = html;
             }
             lucide.createIcons();
         }
 
-        // Global reusable Product Card builder template
-        function generateProductCardHTML(product, currentImg, activeColorName) {
+        function generateProductCardHTML(product) {
             return `
                 <div class="group flex flex-col bg-beige border border-gold/10 hover:border-gold/40 p-3 transition-all duration-300 shadow-sm relative">
-                    <!-- Category Stamp -->
                     <span class="absolute top-6 left-6 z-10 bg-navy/90 text-gold text-[9px] tracking-widest font-light px-3 py-1 uppercase rounded-sm">
                         ${product.category}
                     </span>
                     
-                    <!-- Main image hover viewport wrapper -->
                     <div class="relative overflow-hidden aspect-[4/5] bg-neutral-100 border border-gold/10">
-                        <img id="card-img-${product.id}" src="${currentImg}" alt="${product.name}" 
+                        <img id="card-img-${product.id}" src="${product.img}" alt="${product.name}" 
                              class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105">
                         
-                        <!-- Hover Quick Action Sheet -->
                         <div class="absolute inset-x-0 bottom-0 bg-navy/95 border-t border-gold/30 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-between gap-2">
                             <button onclick="navigateTo('product', {id: ${product.id}})" class="text-beige text-xs uppercase tracking-widest hover:text-gold transition-colors flex items-center space-x-1.5 font-light">
                                 <i data-lucide="eye" class="w-4 h-4"></i>
                                 <span>Quick Details</span>
                             </button>
-                            <button onclick="quickWhatsAppOrder(${product.id}, '${activeColorName}')" class="text-gold text-xs uppercase tracking-widest hover:text-beige transition-colors flex items-center space-x-1 font-medium">
+                            <button onclick="quickWhatsAppOrder(${product.id})" class="text-gold text-xs uppercase tracking-widest hover:text-beige transition-colors flex items-center space-x-1 font-medium">
                                 <span>Order Direct</span>
                                 <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Metadata -->
                     <div class="pt-5 pb-3 flex-grow flex flex-col justify-between">
                         <div class="space-y-1">
                             <h3 class="text-navy font-serif-luxury text-lg tracking-wide hover:text-gold transition-all duration-300 cursor-pointer" onclick="navigateTo('product', {id: ${product.id}})">
@@ -948,7 +683,6 @@
                             </p>
                         </div>
 
-                        <!-- Pricing and Action Link line -->
                         <div class="border-t border-gold/15 mt-5 pt-3.5 flex items-center justify-between">
                             <span class="text-sm font-light text-navy tracking-widest">${product.basePrice}</span>
                             <a href="#product?id=${product.id}" class="text-[10px] tracking-widest font-semibold uppercase text-gold hover:text-navy transition-colors">
@@ -960,22 +694,6 @@
             `;
         }
 
-        // Inline color swapper directly from card interface
-        function updateCardColor(productId, colorName, newImg) {
-            const cardImg = document.getElementById(`card-img-${productId}`);
-            if (cardImg) {
-                cardImg.classList.add('opacity-30');
-                setTimeout(() => {
-                    cardImg.src = newImg;
-                    cardImg.classList.remove('opacity-30');
-                }, 150);
-            }
-            // Temporarily swap cards color active state internally
-            showCustomToast(`Swapped view to ${colorName}`);
-        }
-
-
-        // 3. PRODUCT DETAIL VIEW RENDERER (Color, gallery switcher, sizes & WhatsApp order formulation)
         function renderProductPage() {
             const app = document.getElementById('app-container');
             const targetProd = products.find(p => p.id === appState.selectedProductId);
@@ -990,20 +708,12 @@
                 return;
             }
 
-            // Fallback default state
-            if (!appState.selectedColor || !targetProd.colors[appState.selectedColor]) {
-                appState.selectedColor = targetProd.defaultColor;
-            }
             if (!appState.selectedSize) {
                 appState.selectedSize = targetProd.sizes[0];
             }
 
-            const currentVariant = targetProd.colors[appState.selectedColor];
-
             app.innerHTML = `
                 <div class="page-transition opacity-100 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    
-                    <!-- Back Link -->
                     <div class="mb-10">
                         <a href="#collections" class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest font-light text-charcoal/60 hover:text-gold transition-colors">
                             <i data-lucide="arrow-left" class="w-4 h-4"></i>
@@ -1011,33 +721,14 @@
                         </a>
                     </div>
 
-                    <!-- Main Grid Frame -->
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                        
-                        <!-- COLUMN LEFT: Interactive Gallery / Large display and thumbnails -->
-                        <div class="lg:col-span-7 space-y-4">
-                            <!-- Large Image Frame -->
+                        <div class="lg:col-span-7">
                             <div class="relative bg-white border border-gold/15 p-2 overflow-hidden aspect-[4/5] group cursor-zoom-in" id="galleryPrimaryFrame">
-                                <img id="productDetailMainImg" src="${currentVariant.img}" alt="${targetProd.name}" 
+                                <img id="productDetailMainImg" src="${targetProd.img}" alt="${targetProd.name}" 
                                      class="w-full h-full object-cover transition-transform duration-500 origin-center group-hover:scale-110">
-                            </div>
-
-                            <!-- Thumbnails & Closeups of Variants -->
-                            <div class="grid grid-cols-4 gap-4">
-                                ${Object.keys(targetProd.colors).map(colorKey => {
-                                    const variantObj = targetProd.colors[colorKey];
-                                    const activeBorder = colorKey === appState.selectedColor ? 'border-gold' : 'border-gold/10 hover:border-gold/40';
-                                    return `
-                                        <button onclick="updateProductColorState('${colorKey}')" 
-                                                class="bg-white border p-1 aspect-square overflow-hidden cursor-pointer ${activeBorder} transition-all duration-300">
-                                            <img src="${variantObj.img}" alt="${colorKey} variant preview" class="w-full h-full object-cover">
-                                        </button>
-                                    `;
-                                }).join('')}
                             </div>
                         </div>
 
-                        <!-- COLUMN RIGHT: Structured Product Information Details -->
                         <div class="lg:col-span-5 space-y-8">
                             <div class="border-b border-gold/15 pb-6 space-y-3">
                                 <span class="text-gold tracking-widest text-xs uppercase font-light">${targetProd.category} • Traditional Handcrafted</span>
@@ -1049,7 +740,6 @@
                                 </div>
                             </div>
 
-                            <!-- Size Selection Interface -->
                             <div class="space-y-3">
                                 <div class="flex items-center justify-between text-xs tracking-widest uppercase">
                                     <span class="font-medium text-navy">Size Profiles:</span>
@@ -1072,9 +762,7 @@
                                 </p>
                             </div>
 
-                            <!-- Premium Accordion Tab Info Details -->
                             <div class="border-t border-gold/15 pt-6 space-y-4">
-                                <!-- Fabric Details Tab -->
                                 <details class="group open class-tab" open>
                                     <summary class="flex justify-between items-center font-medium text-xs tracking-widest uppercase text-navy cursor-pointer list-none py-2 border-b border-gold/10">
                                         <span>Product Composition & Fabric</span>
@@ -1086,7 +774,6 @@
                                     </div>
                                 </details>
 
-                                <!-- Care details -->
                                 <details class="group class-tab">
                                     <summary class="flex justify-between items-center font-medium text-xs tracking-widest uppercase text-navy cursor-pointer list-none py-2 border-b border-gold/10">
                                         <span>Care & Maintenance Instructions</span>
@@ -1098,21 +785,14 @@
                                 </details>
                             </div>
 
-                            <!-- WHATSAPP CONCIERGE ORDERING SYSTEM -->
                             <div class="pt-6 space-y-4">
                                 <button onclick="triggerWhatsAppConciergeOrder(${targetProd.id})"
                                         class="w-full bg-navy text-beige border border-gold hover:bg-navy-light text-sm uppercase tracking-widest font-medium py-4 transition-all duration-300 flex items-center justify-center space-x-3.5 shadow-lg group">
                                     <i data-lucide="phone" class="w-5 h-5 text-gold group-hover:scale-110 transition-transform"></i>
                                     <span>Order on WhatsApp</span>
                                 </button>
-                                <div class="flex items-center justify-center space-x-2 text-xs font-light text-charcoal/50">
-                                    <i data-lucide="shield-check" class="w-4 h-4 text-gold"></i>
-                                    <span>Verified Secure Heritage Concierge Desk</span>
-                                </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             `;
@@ -1120,21 +800,12 @@
             setupInteractiveZoom();
         }
 
-        // Color swapping states in detail view
-        function updateProductColorState(colorName) {
-            appState.selectedColor = colorName;
-            renderProductPage();
-            showCustomToast(`Swapped model color to ${colorName}`);
-        }
-
-        // Size swapping states
         function updateProductSizeState(sizeName) {
             appState.selectedSize = sizeName;
             renderProductPage();
             showCustomToast(`Selected size profile: ${sizeName}`);
         }
 
-        // High-end image zoom interactive frame behavior
         function setupInteractiveZoom() {
             const frame = document.getElementById('galleryPrimaryFrame');
             const img = document.getElementById('productDetailMainImg');
@@ -1157,214 +828,97 @@
             });
         }
 
-        // Trigger Order WhatsApp payload generation
         function triggerWhatsAppConciergeOrder(productId) {
             const prod = products.find(p => p.id === productId);
             if (!prod) return;
 
-            const selectedCol = appState.selectedColor || prod.defaultColor;
             const selectedSz = appState.selectedSize || prod.sizes[0];
-            const variantDetails = prod.colors[selectedCol];
-            
-            // Constructing URL details for dynamic reference
-            const productPageUrl = `${window.location.origin}${window.location.pathname}#product?id=${prod.id}`;
-            const productImageUrl = variantDetails.img;
 
-            // Raw message building mapping with required Sikh dynamic greetings
-            const rawMessage = `Waheguru Ji Ka Khalsa Waheguru Ji Ki Fateh
-
-I would like to order:
-Product: ${prod.name}
-Price: ${prod.basePrice}
-Size Choice: ${selectedSz}
-
-Please share available sizes and delivery details.`;
-
-            const encodedMsg = encodeURIComponent(rawMessage);
-            const targetUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodedMsg}`;
-            
-            // Launch WhatsApp redirect secure frame
-            window.open(targetUrl, '_blank');
+            const rawMessage = `Waheguru Ji Ka Khalsa Waheguru Ji Ki Fateh\n\nI would like to order:\nProduct: ${prod.name}\nPrice: ${prod.basePrice}\nSize Choice: ${selectedSz}\n\nPlease share available tailoring parameters and delivery details.`;
+            window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(rawMessage)}`, '_blank');
         }
 
-        // Quick WhatsApp Order Action from grid list cards directly
-        function quickWhatsAppOrder(productId, activeColor) {
+        function quickWhatsAppOrder(productId) {
             const prod = products.find(p => p.id === productId);
             if (!prod) return;
 
-            const productPageUrl = `${window.location.origin}${window.location.pathname}#product?id=${prod.id}`;
-            const variantDetails = prod.colors[activeColor];
-
-            const rawMessage = `Waheguru Ji Ka Khalsa Waheguru Ji Ki Fateh
-
-I would like to order:
-Product: ${prod.name}
-Price: ${prod.basePrice}
-
-Please share available sizes.`;
-
-            const encodedMsg = encodeURIComponent(rawMessage);
-            const targetUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodedMsg}`;
-            
-            window.open(targetUrl, '_blank');
+            const rawMessage = `Waheguru Ji Ka Khalsa Waheguru Ji Ki Fateh\n\nI would like to order:\nProduct: ${prod.name}\nPrice: ${prod.basePrice}\n\nPlease share available sizes.`;
+            window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(rawMessage)}`, '_blank');
         }
 
-
-        // 4. THE ROOTS ABOUT HERITAGE VIEW RENDERER
         function renderAboutPage() {
             const app = document.getElementById('app-container');
-
             app.innerHTML = `
                 <div class="page-transition opacity-100 bg-beige">
-                    
-                    <!-- Title Header -->
                     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center space-y-4">
                         <span class="text-gold uppercase tracking-[0.3em] text-xs font-light block">Ancestral Legacy</span>
                         <h1 class="text-4xl sm:text-5xl font-light text-navy tracking-wide">Our Chardikala Story</h1>
                         <div class="w-12 h-[1px] bg-gold mx-auto mt-2"></div>
                     </section>
 
-                    <!-- Large Grid Presentation -->
                     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                            <!-- Left Col details -->
                             <div class="space-y-6">
                                 <h2 class="text-3xl text-navy font-light leading-tight">Defining Elegant Modesty and Optimism</h2>
                                 <p class="text-sm text-charcoal/70 font-light leading-relaxed">
                                     Welcome to Chardikala Collection, a luxury Sikh clothing brand born from a deep spiritual mission. Our designs beautifully balance authentic Sikh heritage values with contemporary luxury aesthetics, creating a complete head-to-toe wardrobe for women worldwide.
                                 </p>
-                                <p class="text-sm text-charcoal/70 font-light leading-relaxed">
-                                    Experience the perfect blend of tradition and modern luxury. Every single suit, jacket, drape, and stitch in our collection is calculated with deep care to ensure an unmatched premium fit. Sourced directly from our hubs in Punjab and perfected in our master sizing studios, our authentic fabrics celebrate true Punjabi heritage.
-                                </p>
                                 <blockquote class="border-l-2 border-gold pl-6 py-2 italic font-serif-luxury text-lg text-navy">
                                     "For the modern Sikh woman, fashion is not a transient shield—it is an outward expression of quiet self-assurance, modesty, and eternal dignity."
                                 </blockquote>
                             </div>
-                            <!-- Right Col image banner -->
                             <div class="relative p-2 border border-gold/15">
-                                <img src="images/8.jpg" 
-                                     alt="Weaving heritage" class="w-full object-cover aspect-[4/3] grayscale hover:grayscale-0 transition-all duration-700">
-                                <div class="absolute bottom-6 left-6 right-6 bg-navy/95 border border-gold/20 p-6 text-beige">
-                                    <h4 class="font-serif-luxury text-gold text-lg mb-1">Our Heritage Mission</h4>
-                                    <p class="text-xs font-light text-beige/70 leading-relaxed">To nurture master textile artisans globally, allowing ancient handworked skills to find life in modern, high-fashion spaces.</p>
+                                <div class="bg-navy border border-gold/20 p-12 text-beige text-center">
+                                    <h4 class="font-serif-luxury text-gold text-xl mb-3">Our Heritage Mission</h4>
+                                    <p class="text-sm font-light text-beige/70 leading-relaxed">To nurture master textile artisans globally, allowing ancient handworked skills to find life in modern, high-fashion spaces.</p>
                                 </div>
                             </div>
                         </div>
                     </section>
-
-                    <!-- THREE CORE VALUES GRID -->
-                    <section class="bg-navy text-beige py-24">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div class="text-center space-y-3 mb-20">
-                                <span class="text-gold uppercase tracking-widest text-xs font-light">Spiritual Pillars</span>
-                                <h2 class="text-3xl sm:text-4xl font-light text-beige">The Principles of Our Craft</h2>
-                                <div class="w-16 h-[1px] bg-gold mx-auto"></div>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                                <div class="space-y-4">
-                                    <span class="text-4xl font-serif-luxury text-gold">01</span>
-                                    <h3 class="font-serif-luxury text-xl text-beige">Sovereign Majesty</h3>
-                                    <p class="text-sm font-light text-beige/70 leading-relaxed max-w-xs mx-auto">
-                                        Celebrating the inherent equality and royalty historically bestowed upon women by Sikh spiritual leaders.
-                                    </p>
-                                </div>
-                                <div class="space-y-4 border-y md:border-y-0 md:border-x border-gold/15 py-8 md:py-0">
-                                    <span class="text-4xl font-serif-luxury text-gold">02</span>
-                                    <h3 class="font-serif-luxury text-xl text-beige">Ancestral Preservation</h3>
-                                    <p class="text-sm font-light text-beige/70 leading-relaxed max-w-xs mx-auto">
-                                        Supporting organic handlooms, zero-carbon weaves, and preserving fair wages for indigenous crafts-women.
-                                    </p>
-                                </div>
-                                <div class="space-y-4">
-                                    <span class="text-4xl font-serif-luxury text-gold">03</span>
-                                    <h3 class="font-serif-luxury text-xl text-beige">Modest Grace</h3>
-                                    <p class="text-sm font-light text-beige/70 leading-relaxed max-w-xs mx-auto">
-                                        Fostering elegant patterns that support a high-profile presence without sacrificing comfort, dignity, or modesty.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
                 </div>
             `;
         }
 
-
-        // 6. DETAILED ACCORDION FAQ VIEW RENDERER
         function renderFAQPage() {
             const app = document.getElementById('app-container');
-
             const faqs = [
                 {
-                    q: "What makes Chardikala Collection unique from generic e-commerce?",
-                    a: "Unlike common fast-fashion brands, Chardikala Collection works as a dedicated heritage brand. We curate custom tailored sizes, honor spiritual modesty (full linings, comfortable sleeves, long drapes), and source real handcrafted Punjabi tilla embroidery. We operate directly via high-end personal concierge assistance to guarantee satisfaction."
+                    q: "What makes Chardikala Collection unique from generic platforms?",
+                    a: "We curate premium custom-tailored apparel adhering to values of classic modesty (full structured linings, comfortable configurations, long drapes), and source real handcrafted Punjabi tilla embroidery features directly from home artisan networks."
                 },
                 {
                     q: "How does the custom tailoring sizing option operate?",
-                    a: "When browsing any product, select the 'Custom Tailoring' button. Upon placing your direct WhatsApp order inquiry, our master design group reaches out to walk you through standard body metrics. We then stitch the fabric exactly to your profile, ensuring custom lengths, sleeve styles, and neck configurations are perfectly met."
-                },
-                {
-                    q: "What are your secure international shipping timelines?",
-                    a: "We ship free worldwide on custom orders. Handcrafted creations take roughly 10-18 business days to stitch, process, and perform quality review. Transit takes approximately 5-7 business days via reliable express air services (DHL Express, FedEx) with complete real-time tracking details."
-                },
-                {
-                    q: "How should I handle and care for my luxury garments?",
-                    a: "Most silk and heavy zardozi embroideries should only be professionally dry cleaned. For our premium handloom organic linens, a very gentle cold wash by hand with minimal organic washing liquid is fine. Warm iron setups should always be run inside-out to protect delicate gold threads."
-                },
-                {
-                    q: "Can I process refunds or exchanges for custom tailored fits?",
-                    a: "Because custom creations are stitched individually to match your unique dimensions, we do not accept general returns on tailored outfits. However, we guarantee satisfaction and will gladly cover local adjustments or process a free correction if any physical garment specs stray from your submitted measurements."
+                    a: "Select 'Custom Tailoring' when choosing your garment. Upon connecting with our WhatsApp Concierge, our design team coordinates with you directly to map your accurate physical proportions."
                 }
             ];
 
             app.innerHTML = `
                 <div class="page-transition opacity-100 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <!-- Title Header -->
                     <div class="text-center space-y-4 mb-16">
-                        <span class="text-gold uppercase tracking-[0.3em] text-xs font-light block">Customer Concierge Support</span>
                         <h1 class="text-4xl font-light text-navy tracking-wide">Frequently Answered Queries</h1>
-                        <p class="text-xs sm:text-sm font-light text-charcoal/60 max-w-md mx-auto">Common insights on custom fittings, authentic heritage weaves, and premium shipping policies.</p>
                         <div class="w-12 h-[1px] bg-gold mx-auto mt-2"></div>
                     </div>
-
-                    <!-- Accordion Column List -->
                     <div class="space-y-4">
-                        ${faqs.map((faq, index) => {
-                            return `
-                                <div class="bg-beige border border-gold/15 transition-all duration-300">
-                                    <button onclick="toggleAccordion(${index})" 
-                                            class="w-full text-left px-6 py-5 flex items-center justify-between text-navy hover:text-gold focus:outline-none select-none">
-                                        <span class="font-serif-luxury text-base sm:text-lg tracking-wide">${faq.q}</span>
-                                        <i id="accordion-icon-${index}" data-lucide="chevron-down" class="w-5 h-5 text-gold transition-transform duration-300"></i>
-                                    </button>
-                                    <div id="accordion-body-${index}" class="hidden px-6 pb-6 text-sm font-light text-charcoal/70 leading-relaxed border-t border-gold/5 pt-4">
-                                        <p>${faq.a}</p>
-                                    </div>
+                        ${faqs.map((faq, index) => `
+                            <div class="bg-beige border border-gold/15">
+                                <button onclick="toggleAccordion(${index})" class="w-full text-left px-6 py-5 flex items-center justify-between text-navy hover:text-gold focus:outline-none">
+                                    <span class="font-serif-luxury text-base sm:text-lg">${faq.q}</span>
+                                    <i id="accordion-icon-${index}" data-lucide="chevron-down" class="w-5 h-5 text-gold transition-transform duration-300"></i>
+                                </button>
+                                <div id="accordion-body-${index}" class="hidden px-6 pb-6 text-sm font-light text-charcoal/70 border-t border-gold/5 pt-4">
+                                    <p>${faq.a}</p>
                                 </div>
-                            `;
-                        }).join('')}
-                    </div>
-
-                    <!-- Bottom Help Callout -->
-                    <div class="text-center mt-16 bg-navy text-beige p-8 border border-gold/20">
-                        <h3 class="font-serif-luxury text-xl mb-2 text-gold">Have an unaddressed styling query?</h3>
-                        <p class="text-xs font-light text-beige/70 max-w-sm mx-auto mb-6">Our direct styling concierge team is standing by to help customize your next purchase.</p>
-                        <a href="#contact" class="border border-gold text-gold hover:bg-gold hover:text-navy transition-colors px-6 py-3 text-xs tracking-widest uppercase font-medium inline-block">
-                            Speak to an Advisor
-                        </a>
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
             `;
             lucide.createIcons();
         }
 
-        // Toggle Accordion Display States
         function toggleAccordion(idx) {
             const body = document.getElementById(`accordion-body-${idx}`);
             const icon = document.getElementById(`accordion-icon-${idx}`);
-            
             if (body.classList.contains('hidden')) {
                 body.classList.remove('hidden');
                 icon.classList.add('rotate-180');
@@ -1374,97 +928,40 @@ Please share available sizes.`;
             }
         }
 
-
-        // 7. PREMIUM CONTACT VIEW RENDERER (Direct App Redirections)
-function renderContactPage() {
-    const app = document.getElementById('app-container');
-
-    app.innerHTML = `
-        <div class="page-transition opacity-100 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <!-- Title Header -->
-            <div class="text-center space-y-4 mb-16">
-                <span class="text-gold uppercase tracking-[0.3em] text-xs font-light block">Get In Touch</span>
-                <h1 class="text-4xl font-light text-navy tracking-wide">Connect With Our Studio</h1>
-                <p class="text-xs sm:text-sm font-light text-charcoal/60 max-w-md mx-auto">Select your preferred channel to speak directly with our heritage advisors.</p>
-                <div class="w-12 h-[1px] bg-gold mx-auto mt-2"></div>
-            </div>
-
-            <!-- Premium Direct Contact Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 max-w-6xl mx-auto mb-20">
-                
-                <!-- WhatsApp Concierge -->
-                <a href="https://wa.me/917355654106?text=Waheguru%20Ji%20Ka%20Khalsa%20Waheguru%20Ji%20Ki%20Fateh.%20I%20have%20an%20inquiry%20regarding%20Chardikala%20Collection." 
-                   target="_blank" 
-                   class="group block bg-beige border border-gold/20 hover:border-gold p-10 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-gold/10">
-                    <div class="w-16 h-16 mx-auto bg-navy text-gold rounded-full flex items-center justify-center mb-6 group-hover:bg-gold group-hover:text-navy transition-colors duration-500">
-                        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        function renderContactPage() {
+            const app = document.getElementById('app-container');
+            app.innerHTML = `
+                <div class="page-transition opacity-100 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div class="text-center space-y-4 mb-16">
+                        <h1 class="text-4xl font-light text-navy tracking-wide">Connect With Our Studio</h1>
+                        <div class="w-12 h-[1px] bg-gold mx-auto mt-2"></div>
                     </div>
-                    <h3 class="font-serif-luxury text-xl text-navy mb-3">WhatsApp Concierge</h3>
-                    <p class="text-xs text-charcoal/60 font-light mb-8 leading-relaxed">Instant messaging for custom sizing, order coordination, and tailored styling advice.</p>
-                    <span class="text-[10px] tracking-widest uppercase text-navy font-semibold border-b border-gold/40 pb-1 group-hover:text-gold group-hover:border-gold transition-colors duration-300">Message Us</span>
-                </a>
-
-                <!-- Direct Call -->
-                <a href="tel:+917355654106" 
-                   class="group block bg-navy border border-gold/20 hover:border-gold p-10 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-gold/10">
-                    <div class="w-16 h-16 mx-auto bg-gold text-navy rounded-full flex items-center justify-center mb-6 group-hover:bg-beige transition-colors duration-500">
-                        <i data-lucide="phone-call" class="w-7 h-7"></i>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <a href="https://wa.me/917355654106" target="_blank" class="block bg-beige border border-gold/20 p-10 text-center hover:border-gold">
+                            <h3 class="font-serif-luxury text-xl text-navy mb-2">WhatsApp Concierge</h3>
+                            <p class="text-xs text-charcoal/60 font-light">Custom metrics alignment, order status trackings, and textile updates.</p>
+                        </a>
+                        <a href="https://instagram.com/chardikala_collection_" target="_blank" class="block bg-beige border border-gold/20 p-10 text-center hover:border-gold">
+                            <h3 class="font-serif-luxury text-xl text-navy mb-2">Instagram DM</h3>
+                            <p class="text-xs text-charcoal/60 font-light">Browse client portraits, dynamic lookbook snippets, and style releases.</p>
+                        </a>
                     </div>
-                    <h3 class="font-serif-luxury text-xl text-beige mb-3">Direct Line</h3>
-                    <p class="text-xs text-beige/70 font-light mb-8 leading-relaxed">Speak personally with a design consultant during our standard studio hours.</p>
-                    <span class="text-[10px] tracking-widest uppercase text-gold font-semibold border-b border-gold/40 pb-1 group-hover:text-beige group-hover:border-beige transition-colors duration-300">Call Studio</span>
-                </a>
-
-                <!-- Instagram DM -->
-                <a href="https://instagram.com/chardikala_collection_" 
-                   target="_blank" 
-                   class="group block bg-beige border border-gold/20 hover:border-gold p-10 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-gold/10">
-                    <div class="w-16 h-16 mx-auto bg-navy text-gold rounded-full flex items-center justify-center mb-6 group-hover:bg-gold group-hover:text-navy transition-colors duration-500">
-                        <i data-lucide="instagram" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="font-serif-luxury text-xl text-navy mb-3">Instagram DM</h3>
-                    <p class="text-xs text-charcoal/60 font-light mb-8 leading-relaxed">Browse our latest collections, view client diaries, and send us a direct message.</p>
-                    <span class="text-[10px] tracking-widest uppercase text-navy font-semibold border-b border-gold/40 pb-1 group-hover:text-gold group-hover:border-gold transition-colors duration-300">Follow & Connect</span>
-                </a>
-
-            </div>
-
-            <!-- Minimalist Studio Details -->
-            <div class="text-center space-y-5 max-w-2xl mx-auto border-t border-gold/20 pt-12">
-                <h4 class="font-serif-luxury text-xl text-navy">Our Chardikala Studio</h4>
-                <div class="space-y-2 text-xs font-light text-charcoal/70">
-                    <p>Suite 45B, The Sovereign Galleria, Inner Ring Road, Sector 5, Bengaluru, KA 560034, India</p>
                 </div>
-            </div>
-        </div>
-    `;
-    
-    // Initialize icons
-    lucide.createIcons();
-}
+            `;
+            lucide.createIcons();
+        }
 
-
-        // ==========================================
-        // DYNAMIC UTILITIES & HELPERS
-        // ==========================================
-
-        // High-end Toast Notification Engine
         function showCustomToast(message) {
             const toast = document.getElementById('toastNotification');
             const toastMsg = document.getElementById('toastMessage');
-
             toastMsg.textContent = message;
-
-            // Animate toast in and out gracefully
             toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
             toast.classList.add('translate-y-0', 'opacity-100');
-
             setTimeout(() => {
                 toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
                 toast.classList.remove('translate-y-0', 'opacity-100');
             }, 4000);
         }
-
     </script>
 </body>
 </html>
